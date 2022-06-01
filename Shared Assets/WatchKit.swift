@@ -66,7 +66,7 @@ extension WCConnect:WCSessionDelegate {
     #endif
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print(error ?? nil)
+        if (error != nil) {print(error!)}
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
@@ -98,7 +98,7 @@ extension WCConnect:WCSessionDelegate {
         for i in 0..<7 {
             let day_obj = cdstack.day_data[i]
             dictionary["\(i)_morn"] = day_obj.morning_eaten
-            dictionary["\(i)_even"] = day_obj.morning_eaten
+            dictionary["\(i)_even"] = day_obj.evening_eaten
         }
         return dictionary
     }
@@ -108,12 +108,8 @@ extension WCConnect:WCSessionDelegate {
         for i in 0..<7 {
             let day_obj = cdstack.day_data[i]
             day_obj.morning_eaten = dictionary["\(i)_morn"] as! Bool
-            day_obj.morning_eaten = dictionary["\(i)_even"] as! Bool
+            day_obj.evening_eaten = dictionary["\(i)_even"] as! Bool
         }
     }
 }
 
-struct day_data {
-    var morning_eaten:Bool
-    var evening_eaten:Bool
-}
