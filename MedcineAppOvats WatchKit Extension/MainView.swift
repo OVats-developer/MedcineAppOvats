@@ -53,7 +53,8 @@ class mainvm:ObservableObject {
     @Published var label_text:String = "Eat Morning Medicine"
     @Published var color:Color = .orange
     
-    var cancellable:AnyCancellable!
+    var day_cancellable:AnyCancellable!
+    var evening_cancellable:AnyCancellable!
     
     var day_no:Int!
     var day:Day!
@@ -80,27 +81,56 @@ class mainvm:ObservableObject {
                 all_eaten()
             }
         }
+        
+        day_cancellable = day.publisher(for: \.morning_eaten).sink(receiveValue: { val in
+            if (val == true) {
+                if (self.day.evening_eaten == true) {
+                    DispatchQueue.main.async {self.all_eaten()}
+                }
+                else {
+                    DispatchQueue.main.async {self.morning_eaten_state()}
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {self.none_eaten_state()}
+            }
+        })
+        
+        evening_cancellable = day.publisher(for: \.evening_eaten).sink(receiveValue: { val in
+            if (val == true) {
+                if (self.day.morning_eaten == true) {
+                    DispatchQueue.main.async {self.all_eaten()}
+                }
+                else {
+                    DispatchQueue.main.async {self.none_eaten_state()}
+                }
+            }
+            else
+            {
+                if (self.day.morning_eaten == false) {
+                    DispatchQueue.main.async {self.none_eaten_state()}
+                }
+                else
+                {
+                    DispatchQueue.main.async {self.morning_eaten_state()}
+                }
+            }
+        })
     }
     
     func toggle()
     {
         if day.morning_eaten == false {
             day.morning_eaten.toggle()
-            morning_eaten_state()
         }
         else if (day.morning_eaten == true)
         {
             if (day.evening_eaten == false)
             {
-                all_eaten()
                 day.evening_eaten.toggle()
             }
-            else
-            {
-                all_eaten()
-            }
         }
-        cdstack.save()
         cdstack.wc_obj.update_companion(day: day)
     }
     

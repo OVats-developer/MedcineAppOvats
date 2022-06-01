@@ -121,7 +121,7 @@ extension CDStack:NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         if (indexPath == nil) {return}
         let updated_object = frc.object(at: indexPath!)
-        self.save()
+        DispatchQueue.main.async {self.save()}
     }
 }
 
