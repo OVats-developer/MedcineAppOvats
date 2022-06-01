@@ -19,11 +19,15 @@ class WCConnect:NSObject
         super.init()
         session.delegate = self
         session.activate()
+        print(session.isReachable)
     }
     
     
     func update_companion(day:Day)
     {
+        if (session.activationState == .notActivated) {
+            session.activate()
+        }
         if (session.isReachable)
         {
             sendmessage(day: day)
@@ -62,7 +66,7 @@ extension WCConnect:WCSessionDelegate {
     #endif
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("Test")
+        print(error ?? nil)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
