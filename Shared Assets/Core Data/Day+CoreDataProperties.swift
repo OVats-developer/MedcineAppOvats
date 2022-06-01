@@ -43,4 +43,26 @@ extension Day : Identifiable {
             return "Monday"
         }
     }
+    
+    
+    var day_short:String {
+        switch day_no {
+        case Float(0):
+            return "Mon"
+        case Float(1):
+            return "Tue"
+        case Float(2):
+            return "Wed"
+        case Float(3):
+            return "Thu"
+        case Float(4):
+            return "Fri"
+        case Float(5):
+            return "Sat"
+        case Float(6):
+            return "Sun"
+        default:
+            return "Mon"
+        }
+    }
 }

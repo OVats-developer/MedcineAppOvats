@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2415EF532847F4FE009959E4 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2415EF522847F4FE009959E4 /* RowView.swift */; };
 		24794704284580BF00ECF90C /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6B2844CA3A002581FD /* CDStack.swift */; };
 		24AFA3202847DF7500DF7223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AFA31F2847DF7500DF7223 /* ContentView.swift */; };
 		24AFA3222847DFF300DF7223 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AFA3212847DFF300DF7223 /* MainView.swift */; };
@@ -32,7 +33,6 @@
 		24FC7A5B2844C9C0002581FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC7A5A2844C9C0002581FD /* Preview Assets.xcassets */; };
 		24FC7A6C2844CA3A002581FD /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6B2844CA3A002581FD /* CDStack.swift */; };
 		24FC7A6F28452A8F002581FD /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6E28452A8F002581FD /* RowCell.swift */; };
-		24FC7A71284546BB002581FD /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6E28452A8F002581FD /* RowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2415EF522847F4FE009959E4 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		24AFA31F2847DF7500DF7223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24AFA3212847DFF300DF7223 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		24AFA3232847DFFE00DF7223 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -120,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2415EF512847F4E8009959E4 /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				24AFA3232847DFFE00DF7223 /* HistoryView.swift */,
+				2415EF522847F4FE009959E4 /* RowView.swift */,
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
 		24CD69C128479E1B000BEC0C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +193,7 @@
 		24FC7A502844C9C0002581FD /* MedcineAppOvats WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				24AFA3232847DFFE00DF7223 /* HistoryView.swift */,
+				2415EF512847F4E8009959E4 /* HistoryView */,
 				24AFA3212847DFF300DF7223 /* MainView.swift */,
 				24AFA31F2847DF7500DF7223 /* ContentView.swift */,
 				24FC7A532844C9C0002581FD /* MedcineAppOvatsApp.swift */,
@@ -366,8 +376,8 @@
 				24FC7A542844C9C0002581FD /* MedcineAppOvatsApp.swift in Sources */,
 				24AFA3242847DFFE00DF7223 /* HistoryView.swift in Sources */,
 				24CD69BA2847967D000BEC0C /* DataModel.xcdatamodeld in Sources */,
+				2415EF532847F4FE009959E4 /* RowView.swift in Sources */,
 				24AFA3202847DF7500DF7223 /* ContentView.swift in Sources */,
-				24FC7A71284546BB002581FD /* RowCell.swift in Sources */,
 				24CD69BE28479CFE000BEC0C /* Day+CoreDataClass.swift in Sources */,
 				24FC7A562844C9C0002581FD /* ComplicationController.swift in Sources */,
 			);
