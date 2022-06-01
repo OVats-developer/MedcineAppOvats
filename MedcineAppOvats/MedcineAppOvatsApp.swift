@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 @main
 struct MedcineAppOvatsApp: App {
+    
+    @StateObject var CDStack:CDStack = .init()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(CDStack)
         }
     }
 }

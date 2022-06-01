@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var cdstack:CDStack
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List {
+            ForEach (cdstack.day_data) {day in
+                RowCell(day: day)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(CDStack())
+            .preferredColorScheme(.dark)
     }
 }

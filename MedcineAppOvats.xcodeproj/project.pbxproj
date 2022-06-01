@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24794704284580BF00ECF90C /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6B2844CA3A002581FD /* CDStack.swift */; };
+		24CD69B92847963D000BEC0C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69B72847963D000BEC0C /* DataModel.xcdatamodeld */; };
+		24CD69BA2847967D000BEC0C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69B72847963D000BEC0C /* DataModel.xcdatamodeld */; };
+		24CD69BD28479CFE000BEC0C /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69BB28479CFE000BEC0C /* Day+CoreDataClass.swift */; };
+		24CD69BE28479CFE000BEC0C /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69BB28479CFE000BEC0C /* Day+CoreDataClass.swift */; };
+		24CD69BF28479CFE000BEC0C /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69BC28479CFE000BEC0C /* Day+CoreDataProperties.swift */; };
+		24CD69C028479CFE000BEC0C /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69BC28479CFE000BEC0C /* Day+CoreDataProperties.swift */; };
+		24CD69C328479E28000BEC0C /* WatchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69C228479E28000BEC0C /* WatchKit.swift */; };
+		24CD69C428479E28000BEC0C /* WatchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD69C228479E28000BEC0C /* WatchKit.swift */; };
 		24FC7A372844C9BD002581FD /* MedcineAppOvatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A362844C9BD002581FD /* MedcineAppOvatsApp.swift */; };
 		24FC7A392844C9BD002581FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A382844C9BD002581FD /* ContentView.swift */; };
 		24FC7A3B2844C9BF002581FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC7A3A2844C9BF002581FD /* Assets.xcassets */; };
@@ -14,11 +23,14 @@
 		24FC7A422844C9BF002581FD /* MedcineAppOvats WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 24FC7A412844C9BF002581FD /* MedcineAppOvats WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24FC7A472844C9C0002581FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC7A462844C9C0002581FD /* Assets.xcassets */; };
 		24FC7A4D2844C9C0002581FD /* MedcineAppOvats WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24FC7A4C2844C9C0002581FD /* MedcineAppOvats WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		24FC7A522844C9C0002581FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A512844C9C0002581FD /* ContentView.swift */; };
 		24FC7A542844C9C0002581FD /* MedcineAppOvatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A532844C9C0002581FD /* MedcineAppOvatsApp.swift */; };
 		24FC7A562844C9C0002581FD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A552844C9C0002581FD /* ComplicationController.swift */; };
 		24FC7A582844C9C0002581FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC7A572844C9C0002581FD /* Assets.xcassets */; };
 		24FC7A5B2844C9C0002581FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FC7A5A2844C9C0002581FD /* Preview Assets.xcassets */; };
+		24FC7A6C2844CA3A002581FD /* CDStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6B2844CA3A002581FD /* CDStack.swift */; };
+		24FC7A6F28452A8F002581FD /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6E28452A8F002581FD /* RowCell.swift */; };
+		24FC7A70284545EE002581FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A382844C9BD002581FD /* ContentView.swift */; };
+		24FC7A71284546BB002581FD /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC7A6E28452A8F002581FD /* RowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +76,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24CD69B82847963D000BEC0C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		24CD69BB28479CFE000BEC0C /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		24CD69BC28479CFE000BEC0C /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		24CD69C228479E28000BEC0C /* WatchKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchKit.swift; sourceTree = "<group>"; };
 		24FC7A332844C9BD002581FD /* MedcineAppOvats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedcineAppOvats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC7A362844C9BD002581FD /* MedcineAppOvatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedcineAppOvatsApp.swift; sourceTree = "<group>"; };
 		24FC7A382844C9BD002581FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,12 +88,13 @@
 		24FC7A412844C9BF002581FD /* MedcineAppOvats WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedcineAppOvats WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC7A462844C9C0002581FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24FC7A4C2844C9C0002581FD /* MedcineAppOvats WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MedcineAppOvats WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		24FC7A512844C9C0002581FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24FC7A532844C9C0002581FD /* MedcineAppOvatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedcineAppOvatsApp.swift; sourceTree = "<group>"; };
 		24FC7A552844C9C0002581FD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		24FC7A572844C9C0002581FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24FC7A5A2844C9C0002581FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24FC7A5C2844C9C0002581FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24FC7A6B2844CA3A002581FD /* CDStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStack.swift; sourceTree = "<group>"; };
+		24FC7A6E28452A8F002581FD /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CD69C128479E1B000BEC0C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				24FC7A6B2844CA3A002581FD /* CDStack.swift */,
+				24CD69BB28479CFE000BEC0C /* Day+CoreDataClass.swift */,
+				24CD69BC28479CFE000BEC0C /* Day+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		24FC7A2A2844C9BD002581FD = {
 			isa = PBXGroup;
 			children = (
+				24CD69B72847963D000BEC0C /* DataModel.xcdatamodeld */,
+				24FC7A6A2844C9FA002581FD /* Shared Assets */,
 				24FC7A352844C9BD002581FD /* MedcineAppOvats */,
 				24FC7A452844C9BF002581FD /* MedcineAppOvats WatchKit App */,
 				24FC7A502844C9C0002581FD /* MedcineAppOvats WatchKit Extension */,
@@ -121,6 +150,7 @@
 		24FC7A352844C9BD002581FD /* MedcineAppOvats */ = {
 			isa = PBXGroup;
 			children = (
+				24FC7A6E28452A8F002581FD /* RowCell.swift */,
 				24FC7A362844C9BD002581FD /* MedcineAppOvatsApp.swift */,
 				24FC7A382844C9BD002581FD /* ContentView.swift */,
 				24FC7A3A2844C9BF002581FD /* Assets.xcassets */,
@@ -148,7 +178,6 @@
 		24FC7A502844C9C0002581FD /* MedcineAppOvats WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				24FC7A512844C9C0002581FD /* ContentView.swift */,
 				24FC7A532844C9C0002581FD /* MedcineAppOvatsApp.swift */,
 				24FC7A552844C9C0002581FD /* ComplicationController.swift */,
 				24FC7A572844C9C0002581FD /* Assets.xcassets */,
@@ -164,6 +193,15 @@
 				24FC7A5A2844C9C0002581FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24FC7A6A2844C9FA002581FD /* Shared Assets */ = {
+			isa = PBXGroup;
+			children = (
+				24CD69C128479E1B000BEC0C /* Core Data */,
+				24CD69C228479E28000BEC0C /* WatchKit.swift */,
+			);
+			path = "Shared Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +275,7 @@
 					};
 					24FC7A402844C9BF002581FD = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 					};
 					24FC7A4B2844C9C0002581FD = {
 						CreatedOnToolsVersion = 13.4;
@@ -297,8 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CD69C328479E28000BEC0C /* WatchKit.swift in Sources */,
+				24CD69BD28479CFE000BEC0C /* Day+CoreDataClass.swift in Sources */,
+				24FC7A6F28452A8F002581FD /* RowCell.swift in Sources */,
+				24CD69B92847963D000BEC0C /* DataModel.xcdatamodeld in Sources */,
 				24FC7A392844C9BD002581FD /* ContentView.swift in Sources */,
 				24FC7A372844C9BD002581FD /* MedcineAppOvatsApp.swift in Sources */,
+				24FC7A6C2844CA3A002581FD /* CDStack.swift in Sources */,
+				24CD69BF28479CFE000BEC0C /* Day+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24FC7A522844C9C0002581FD /* ContentView.swift in Sources */,
+				24CD69C428479E28000BEC0C /* WatchKit.swift in Sources */,
+				24CD69C028479CFE000BEC0C /* Day+CoreDataProperties.swift in Sources */,
+				24FC7A70284545EE002581FD /* ContentView.swift in Sources */,
+				24794704284580BF00ECF90C /* CDStack.swift in Sources */,
 				24FC7A542844C9C0002581FD /* MedcineAppOvatsApp.swift in Sources */,
+				24CD69BA2847967D000BEC0C /* DataModel.xcdatamodeld in Sources */,
+				24FC7A71284546BB002581FD /* RowCell.swift in Sources */,
+				24CD69BE28479CFE000BEC0C /* Day+CoreDataClass.swift in Sources */,
 				24FC7A562844C9C0002581FD /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +559,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G42C3QL88Q;
@@ -516,12 +568,18 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "MedcineAppOvats WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.OshinVats.MedcineAppOvats;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OshinVats.MedcineAppOvats.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.5;
@@ -534,6 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G42C3QL88Q;
@@ -542,6 +601,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "MedcineAppOvats WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.OshinVats.MedcineAppOvats;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OshinVats.MedcineAppOvats.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,6 +722,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24CD69B72847963D000BEC0C /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24CD69B82847963D000BEC0C /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 24CD69B82847963D000BEC0C /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24FC7A2B2844C9BD002581FD /* Project object */;
 }
