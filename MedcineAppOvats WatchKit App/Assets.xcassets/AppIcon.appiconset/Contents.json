@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "appstore1024-24@2x.png",
+      "filename" : "mac1024 copy-24@2x.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -9,7 +9,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "appstore1024-27-5@2x.png",
+      "filename" : "mac1024 copy-27-5@2x.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -17,21 +17,21 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "appstore1024-29@2x.png",
+      "filename" : "mac1024 copy-29@2x.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "appstore1024-29@3x.png",
+      "filename" : "mac1024 copy-29@3x.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "appstore1024-33@2x.png",
+      "filename" : "mac1024 copy-33@2x.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -39,7 +39,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "appstore1024-40@2x.png",
+      "filename" : "mac1024 copy-40@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -47,7 +47,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "appstore1024-44@2x.png",
+      "filename" : "mac1024 copy-44@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -55,7 +55,7 @@
       "subtype" : "40mm"
     },
     {
-      "filename" : "appstore1024-46@2x.png",
+      "filename" : "mac1024 copy-46@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -63,7 +63,7 @@
       "subtype" : "41mm"
     },
     {
-      "filename" : "appstore1024-50@2x.png",
+      "filename" : "mac1024 copy-50@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -71,7 +71,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "appstore1024-51@2x.png",
+      "filename" : "mac1024 copy-51@2x.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -79,7 +79,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "appstore1024-86@2x.png",
+      "filename" : "mac1024 copy-86@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -87,15 +87,15 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "appstore1024-98@2x.png",
-      "idiom" : "watch",
+     "filename" : "mac1024 copy-98@2x.png",
+     "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
       "size" : "98x98",
       "subtype" : "42mm"
     },
     {
-      "filename" : "appstore1024-108@2x.png",
+      "filename" : "mac1024 copy-108@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -103,7 +103,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "appstore1024-117@2x.png",
+      "filename" : "mac1024 copy-117@2x.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -111,7 +111,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "mac1024.png",
+      "filename" : "mac1024 copy-1024@1x.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -122,3 +122,4 @@
     "version" : 1
   }
 }
+
