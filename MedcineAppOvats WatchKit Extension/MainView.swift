@@ -50,8 +50,8 @@ class mainvm:ObservableObject {
     
     
     @Published var morning_eaten:Bool = false
-    @Published var label_text:String = "Eat Morning Medicine"
-    @Published var color:Color = .orange
+    @Published var label_text:String = "Eat Morning?"
+    @Published var color:Color = .orange.opacity(0.8)
     
     var day_cancellable:AnyCancellable!
     var evening_cancellable:AnyCancellable!
@@ -64,8 +64,8 @@ class mainvm:ObservableObject {
     func onappear(stack:CDStack, day_no:Int)
     {
         self.cdstack = stack
-        self.day_no = day_no
-        self.day = cdstack.day_data[day_no]
+        self.day_no = day_no - 1
+        self.day = cdstack.day_data[self.day_no]
         if (day.morning_eaten == false)
         {
             none_eaten_state()
@@ -137,21 +137,21 @@ class mainvm:ObservableObject {
     func none_eaten_state()
     {
         morning_eaten = false
-        color = .orange
-        label_text = "Eat Morning Medicine"
+        color = .orange.opacity(0.8)
+        label_text = "Eat Morning?"
     }
     
     func morning_eaten_state()
     {
         morning_eaten = true
-        color = .blue
-        label_text = "Eat Evening Medicine"
+        color = .blue.opacity(0.8)
+        label_text = "Eat Evening?"
     }
     
     func all_eaten()
     {
         morning_eaten = true
         color = .black
-        label_text = "All Medicine Eaten"
+        label_text = "All Eaten"
     }
 }
