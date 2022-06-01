@@ -15,7 +15,7 @@ struct MedcineAppOvatsApp: App {
 
     var body: some Scene {
         WindowGroup {
-                ContentView().environmentObject(cdstack)
+            ContentView().environmentObject(cdstack).preferredColorScheme(.dark)
         }
     }
 }
