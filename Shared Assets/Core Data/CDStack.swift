@@ -23,6 +23,9 @@ class CDStack:NSObject,ObservableObject {
     var context:NSManagedObjectContext
     var wc_obj:WCConnect!
     
+    var lastresetdate:Date?
+    var nextresetdate:Date?
+    
     @Published var day_data:[Day] = []
     
     var container:NSPersistentContainer = {
@@ -37,6 +40,24 @@ class CDStack:NSObject,ObservableObject {
         }
         return container
     }()
+    
+    func check_reset()
+    {
+        lastresetdate = UserDefaults.standard.object(forKey: "lastresetdate") as? Date
+        if (lastresetdate == nil) {
+            lastresetdate = Calendar.startofweek(date: .init())
+            UserDefaults.standard.set(lastresetdate, forKey: "lastresetdate")
+        }
+        nextresetdate = Calendar.current.date(byAdding: .weekOfYear, value: 1, to: lastresetdate!)
+        if (Date.init() > nextresetdate!) {
+            for day in day_data {
+                day.morning_eaten = false
+                day.evening_eaten = false
+            }
+            lastresetdate = Calendar.startofweek(date: .init())
+            UserDefaults.standard.set(lastresetdate, forKey: "lastresetdate")
+        }
+    }
     
     
     override init()
@@ -55,7 +76,7 @@ class CDStack:NSObject,ObservableObject {
             frc.delegate = self
         }
         catch {print(error)}
-        
+        check_reset()
     }
     
     
@@ -98,9 +119,27 @@ class CDStack:NSObject,ObservableObject {
 extension CDStack:NSFetchedResultsControllerDelegate {
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if (indexPath == nil) {return}
         let updated_object = frc.object(at: indexPath!)
         self.save()
     }
 }
 
+
+extension Calendar {
+    static func startofweek(date:Date) -> Date {
+        
+        let cal = self.init(identifier: .gregorian)
+        let components = cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
+        var startofweek_pp = cal.date(from: components)!
+        startofweek_pp = cal.date(bySettingHour: 3, minute: 0, second: 0, of: startofweek_pp)!
+        
+        var startofweek = startofweek_pp
+        
+        if (cal.firstWeekday == 1) {
+            startofweek = cal.date(byAdding: .day, value: 1, to: startofweek)!
+        }
+        return startofweek
+    }
+}
 

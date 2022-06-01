@@ -12,11 +12,13 @@ struct ContentView: View {
     @EnvironmentObject var cdstack:CDStack
     
     var body: some View {
-        List {
-            ForEach (cdstack.day_data) {day in
-                RowCell(day: day)
+        NavigationView {
+            List {
+                ForEach (cdstack.day_data) {day in
+                    RowCell(day: day)
+                }
             }
-        }
+        }.navigationViewStyle(.stack)
     }
 }
 
