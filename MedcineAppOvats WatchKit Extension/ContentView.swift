@@ -45,9 +45,12 @@ class contentvm:ObservableObject {
     
     init()
     {
-        let day_label_comp:Int = Calendar.current.component(.weekday, from: .init())
+        var day_label_comp:Int = Calendar.current.component(.weekday, from: .init())
         self.day_no = day_label_comp - 1
+        if (Calendar.current.component(.hour, from: .init()) < 3) {
+            self.day_no = day_label_comp - 2
+            day_label_comp = day_label_comp - 1
+        }
         day_label = Calendar.current.weekdaySymbols[day_label_comp - 1]
-
     }
 }
