@@ -7,11 +7,18 @@
 
 import Foundation
 import WatchConnectivity
+import Combine
 
 class WCConnect:NSObject
 {
     var session:WCSession
     var cdstack:CDStack
+    
+    var stored_dictionary_message:[String:Any]!
+    var stored_dictionary_context:[String:Any]!
+    
+    var message_cancellable:AnyCancellable!
+    var context_cancellable:AnyCancellable!
     
     init (stack:CDStack) {
         session = .default
@@ -71,15 +78,48 @@ extension WCConnect:WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         
+        if (cdstack.day_data.count != 7)
+        {
+            self.stored_dictionary_message = message
+            message_cancellable = cdstack.$day_data.sink(receiveValue: { vals in
+                if (self.cdstack.day_data.count != 7) { return }
+                DispatchQueue.main.async {
+                    self.message_processing(message: self.stored_dictionary_message)
+                    self.message_cancellable.cancel()
+                }
+            })
+        }
+        else
+        {
+            message_processing(message: message)
+        }
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if (cdstack.day_data.count != 7)
+        {
+            self.stored_dictionary_context = applicationContext
+            self.context_cancellable = cdstack.$day_data.sink(receiveValue: { vals in
+                if (self.cdstack.day_data.count != 7) {return}
+                DispatchQueue.main.async {
+                    self.decode_context(dictionary: self.stored_dictionary_context)
+                    self.context_cancellable.cancel()
+                }
+            })
+        }
+        else
+        {
+            decode_context(dictionary: applicationContext)
+        }
+    }
+    
+    func message_processing(message:[String:Any])
+    {
         let day_no:Int = Int(message["day_no"] as! Float)
         let day_obj:Day = cdstack.day_data[day_no]
         day_obj.morning_eaten = message["morning_eaten"] as! Bool
         day_obj.evening_eaten = message["evening_eaten"] as! Bool
 
-    }
-    
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        decode_context(dictionary: applicationContext)
     }
     
     func create_message_dictionary(day:Day) -> [String:Any]
