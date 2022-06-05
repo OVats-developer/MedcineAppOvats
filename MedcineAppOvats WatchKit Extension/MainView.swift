@@ -64,7 +64,8 @@ class mainvm:ObservableObject {
     func onappear(stack:CDStack, day_no:Int)
     {
         self.cdstack = stack
-        self.day_no = day_no - 1
+        self.day_no = day_no
+        if (self.day_no < 0) {self.day_no = 6}
         self.day = cdstack.day_data[self.day_no]
         if (day.morning_eaten == false)
         {
