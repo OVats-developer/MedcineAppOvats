@@ -34,7 +34,6 @@ class CDStack:NSObject,ObservableObject {
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.loadPersistentStores { description, error in
             if (error != nil) {
-                print(error!)
                 fatalError()
             }
         }
@@ -75,7 +74,7 @@ class CDStack:NSObject,ObservableObject {
             DispatchQueue.main.async {self.settingup_data()}
             frc.delegate = self
         }
-        catch {print(error)}
+        catch {}
         check_reset()
     }
     

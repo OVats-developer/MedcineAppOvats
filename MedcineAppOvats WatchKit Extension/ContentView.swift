@@ -25,7 +25,7 @@ struct ContentView: View {
                         Text("History")
                     }
                 }
-                MainView(day_no: mainvm.day_no)
+                MainView()
             }
             .onAppear {
                 mainvm.onappear()

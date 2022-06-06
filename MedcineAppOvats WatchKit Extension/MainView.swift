@@ -12,8 +12,8 @@ struct MainView: View {
     
     @EnvironmentObject var cdstack:CDStack
     @StateObject var mainvm:mainvm = .init()
-    
-    var day_no:Int
+    @Environment(\.scenePhase) private var scenePhase
+
     
     var body: some View {
         
@@ -34,14 +34,11 @@ struct MainView: View {
         })
         .buttonStyle(.borderless)
         .onAppear {
-            mainvm.onappear(stack: self.cdstack, day_no: day_no)
+            mainvm.onappear(stack: self.cdstack)
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView(day_no: 2).environmentObject(CDStack())
+        .onChange(of: scenePhase) { newValue in
+            mainvm.onappear(stack: self.cdstack)
+        }
     }
 }
 
@@ -56,13 +53,26 @@ class mainvm:ObservableObject {
     var day_cancellable:AnyCancellable!
     var evening_cancellable:AnyCancellable!
     
-    var day_no:Int!
+    @Published var day_no:Int!
     var day:Day!
     
     var cdstack:CDStack!
     
-    func onappear(stack:CDStack, day_no:Int)
+    func onappear(stack:CDStack)
     {
+        
+        var temp_day_no = Calendar.current.component(.weekday, from: .init())
+        if (temp_day_no == 1) {temp_day_no = 6}
+        else {temp_day_no = temp_day_no - 2}
+        
+        if (Calendar.current.component(.hour, from: .init()) <= 3) {
+            if (temp_day_no == 0) {temp_day_no = 6}
+            else {temp_day_no -= 1}
+        }
+        
+        self.day_no = temp_day_no
+
+        
         self.cdstack = stack
         self.day_no = day_no
         if (self.day_no < 0) {self.day_no = 6}
